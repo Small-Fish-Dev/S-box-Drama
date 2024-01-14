@@ -1,5 +1,6 @@
 using Sandbox;
 using Sandbox.Citizen;
+using System.Collections.Generic;
 using static Sandbox.Citizen.CitizenAnimationHelper;
 
 public sealed class Acting : Component
@@ -9,6 +10,9 @@ public sealed class Acting : Component
 
 	[Property]
 	public CitizenAnimationHelper AnimationHelper { get; set; }
+
+	[Property]
+	public List<Clothing> Clothing { get; set; }
 
 	public enum FaceType
 	{
@@ -80,6 +84,13 @@ public sealed class Acting : Component
 	[Property]
 	public SittingStyle SittingStyle { get; set; } = SittingStyle.None;
 
+	protected override void DrawGizmos()
+	{
+		base.DrawGizmos();
+
+
+	}
+
 	protected override void OnUpdate()
 	{
 		if ( AnimationHelper == null ) return;
@@ -101,7 +112,7 @@ public sealed class Acting : Component
 
 		if ( HoldingLeft != null )
 		{
-			var handTransform = Actor.GetBoneObject( 15 ).Transform.World;
+			var handTransform = Actor.GetBoneObject( 10 ).Transform.World;
 			var offsetTransform = handTransform.WithPosition( handTransform.PointToWorld( LeftPositionOffset ) );
 			var rotatedTransform = offsetTransform.WithRotation( offsetTransform.Rotation * LeftAngleOffset );
 			draw.Model( HoldingLeft, rotatedTransform );
@@ -109,7 +120,7 @@ public sealed class Acting : Component
 
 		if ( HoldingRight != null )
 		{
-			var handTransform = Actor.GetBoneObject( 10 ).Transform.World;
+			var handTransform = Actor.GetBoneObject( 15 ).Transform.World;
 			var offsetTransform = handTransform.WithPosition( handTransform.PointToWorld( RightPositionOffset ) );
 			var rotatedTransform = offsetTransform.WithRotation( offsetTransform.Rotation * RightAngleOffset );
 			draw.Model( HoldingRight, rotatedTransform );
@@ -119,5 +130,14 @@ public sealed class Acting : Component
 	protected override void OnAwake()
 	{
 		base.OnAwake();
+
+		if ( Actor == null ) return;
+
+		var container = new ClothingContainer();
+
+		foreach ( var clothing in Clothing )
+			container.Toggle( clothing );
+
+		container.Apply( Actor );
 	}
 }

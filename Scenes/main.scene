@@ -29,7 +29,7 @@
           "__version": 0,
           "__type": "SkinnedModelRenderer",
           "__enabled": true,
-          "BodyGroups": 65,
+          "BodyGroups": 341,
           "BoneMergeTarget": null,
           "CreateBoneObjects": true,
           "MaterialGroup": "Skin02",
@@ -74,6 +74,13 @@
           "__enabled": true,
           "Actor": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
           "AnimationHelper": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+          "Clothing": [
+            "models/citizen_clothes/hair/hair_longbrown/models/hair_longbrown.clothing",
+            "models/citizen_clothes/hair/eyebrows/eyebrows.clothing",
+            "models/citizen_clothes/shirt/chef_shirt/chef_shirt.clothing",
+            "models/citizen_clothes/trousers/legarmour/leg_armour.clothing",
+            "models/citizen_clothes/shoes/smartshoes/smartshoes.clothing"
+          ],
           "DuckLevel": 0,
           "Emotion": "Angry",
           "HoldingLeft": "models/weapons/w_pistol.vmdl",
@@ -854,111 +861,6 @@
               "Position": "-0.8840863,4.427398,3.807924",
               "Rotation": "0.6508959,0.276287,-0.2762894,0.6508949",
               "Enabled": true
-            }
-          ]
-        },
-        {
-          "Id": "04832d90-bd53-4456-8797-b773ac2c0eda",
-          "Name": "Hair",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/hair/hair_longbrown/models/hair_longbrown.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "05463a90-3ace-49c8-bb63-bde5866f067c",
-          "Name": "Eyebrows",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/hair/eyebrows/models/eyebrows.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "531ba8fc-1df3-498c-95ad-3159ebc9c58f",
-          "Name": "Shirt",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/shirt/chef_shirt/models/chef_shirt.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "710aa439-ed3b-47a8-99d1-58b49df957f2",
-          "Name": "Pants",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/trousers/legarmour/models/leg_armour.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
-        },
-        {
-          "Id": "56a305e1-bcdd-468b-afd5-13ed9bf8d959",
-          "Name": "Shoes",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen_clothes/shoes/smartshoes/smartshoes.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
             }
           ]
         }
