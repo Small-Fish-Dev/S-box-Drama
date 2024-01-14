@@ -30,12 +30,17 @@ public sealed class Acting : Component
 	[Property]
 	public Vector3 RightPositionOffset { get; set; }
 
+	[Property]
+	[Range( 0f, 2f, 0.1f )]
+	public float DuckLevel { get; set; } = 0f;
+
 	protected override void OnUpdate()
 	{
 		if ( AnimationHelper == null ) return;
 		if ( Actor == null ) return;
 
 		AnimationHelper.HoldType = HoldType;
+		AnimationHelper.DuckLevel = DuckLevel;
 
 		var draw = Gizmo.Draw;
 
