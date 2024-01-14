@@ -1,5 +1,6 @@
 using Sandbox;
 using Sandbox.Citizen;
+using static Sandbox.Citizen.CitizenAnimationHelper;
 
 public sealed class Acting : Component
 {
@@ -10,7 +11,7 @@ public sealed class Acting : Component
 	public CitizenAnimationHelper AnimationHelper { get; set; }
 
 	[Property]
-	public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.None;
+	public HoldTypes HoldType { get; set; } = HoldTypes.None;
 
 	[Property]
 	public Model HoldingLeft { get; set; }
@@ -34,6 +35,27 @@ public sealed class Acting : Component
 	[Range( 0f, 2f, 0.1f )]
 	public float DuckLevel { get; set; } = 0f;
 
+	[Property]
+	public bool IsGrounded { get; set; } = true;
+
+	[Property]
+	public bool IsSwimming { get; set; } = false;
+
+	[Property]
+	public bool IsClimbing { get; set; } = false;
+
+	[Property]
+	public bool IsNoclipping { get; set; } = false;
+
+	[Property]
+	public bool IsWeaponLowered { get; set; } = false;
+
+	[Property]
+	public bool IsSitting { get; set; } = false;
+
+	[Property]
+	public SittingStyle SittingStyle { get; set; } = SittingStyle.Chair;
+
 	protected override void OnUpdate()
 	{
 		if ( AnimationHelper == null ) return;
@@ -41,6 +63,13 @@ public sealed class Acting : Component
 
 		AnimationHelper.HoldType = HoldType;
 		AnimationHelper.DuckLevel = DuckLevel;
+		AnimationHelper.IsGrounded = IsGrounded;
+		AnimationHelper.IsSwimming = IsSwimming;
+		AnimationHelper.IsClimbing = IsClimbing;
+		AnimationHelper.IsNoclipping = IsNoclipping;
+		AnimationHelper.IsWeaponLowered = IsWeaponLowered;
+		AnimationHelper.IsSitting = IsSitting;
+		AnimationHelper.Sitting = SittingStyle;
 
 		var draw = Gizmo.Draw;
 
