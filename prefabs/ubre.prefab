@@ -1,0 +1,135 @@
+{
+  "RootObject": {
+    "Id": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+    "Name": "Actor",
+    "Position": "63.92095,375.1204,9.027863",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 65,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": "Skin02",
+        "MaterialOverride": null,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen_clothes/hair/hair_longbrown/models/hair_longbrown.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen_clothes/hair/eyebrows/models/eyebrows.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen_clothes/shirt/chef_shirt/models/chef_shirt.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen_clothes/trousers/legarmour/models/leg_armour.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen_clothes/shoes/smartshoes/smartshoes.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "Voice",
+        "__enabled": true,
+        "Loopback": false,
+        "Mode": "AlwaysOn",
+        "MorphFadeSpeed": 50,
+        "MorphScale": 2,
+        "PushToTalkInput": "voice",
+        "Renderer": "00ae2dff-51a0-484a-b693-93cd0e1d1c5b",
+        "Volume": 1,
+        "WorldspacePlayback": true
+      }
+    ],
+    "Children": [
+      {
+        "Id": "9e58bc4a-9844-4141-9570-e19bb107055c",
+        "Name": "Camera",
+        "Position": "80,0,64",
+        "Rotation": "0.00000000000000000001818313,0.00000000000002842189,-1,-0.0000006397578",
+        "Tags": "maincamera",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "CameraComponent",
+            "__enabled": true,
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
