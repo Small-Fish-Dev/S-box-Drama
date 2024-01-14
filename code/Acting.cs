@@ -10,6 +10,30 @@ public sealed class Acting : Component
 	[Property]
 	public CitizenAnimationHelper AnimationHelper { get; set; }
 
+	public enum FaceType
+	{
+		[Icon( "sentiment_neutral" )]
+		None,
+
+		[Icon( "mood" )]
+		Smile,
+
+		[Icon( "sentiment_dissatisfied" )]
+		Frown,
+
+		[Icon( "mood" )]
+		Surprise,
+
+		[Icon( "mood_bad" )]
+		Sad,
+
+		[Icon( "mood_bad" )]
+		Angry
+	}
+
+	[Property]
+	public FaceType Emotion { get; set; } = FaceType.None;
+
 	[Property]
 	public HoldTypes HoldType { get; set; } = HoldTypes.None;
 
@@ -54,7 +78,7 @@ public sealed class Acting : Component
 	public bool IsSitting { get; set; } = false;
 
 	[Property]
-	public SittingStyle SittingStyle { get; set; } = SittingStyle.Chair;
+	public SittingStyle SittingStyle { get; set; } = SittingStyle.None;
 
 	protected override void OnUpdate()
 	{
@@ -70,6 +94,8 @@ public sealed class Acting : Component
 		AnimationHelper.IsWeaponLowered = IsWeaponLowered;
 		AnimationHelper.IsSitting = IsSitting;
 		AnimationHelper.Sitting = SittingStyle;
+
+		Actor.Set( "face_override", (int)Emotion );
 
 		var draw = Gizmo.Draw;
 
